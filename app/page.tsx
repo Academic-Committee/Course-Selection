@@ -1,101 +1,254 @@
-import Image from "next/image";
+"use client";
+import React, { useState, useEffect } from "react";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { programContent } from "./utils/types";
+import { ShowCoursesModal } from "./utils/components/show-courses-modal";
+import {
+  YearTwoCMFirstSem,
+  YearThreeCMFirstSem,
+  YearFourCMFirstSem,
+} from "./utils/combined-major-courses";
+import {
+  YearTwoITFirstSem,
+  YearThreeITFirstSem,
+  YearFourITFirstSem,
+} from "./utils/IT-courses";
+import {
+  YearTwoMFirstSem,
+  YearThreeMFirstSem,
+  YearFourMFirstSem,
+} from "./utils/minor-courses";
+import {
+  YearTwoSMFirstSem,
+  YearThreeSMFirstSem,
+  YearFourSMFirstSem,
+} from "./utils/single-major-courses";
+import ParallaxImages from "./utils/components/parallax";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [semester, setSemester] = useState<string>();
+  const [level, setLevel] = useState<string>();
+  const [programme, setProgramme] = useState<string>();
+  const [courses, setCourses] = useState<programContent>();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const handleSemesterChange = (event: SelectChangeEvent) => {
+    setSemester(event.target.value as string);
+  };
+
+  const handleLevelChange = (event: SelectChangeEvent) => {
+    setLevel(event.target.value as string);
+  };
+
+  const handleProgrammeChange = (event: SelectChangeEvent) => {
+    setProgramme(event.target.value as string);
+  };
+
+  const handleGetCourses = () => {
+    if (!semester || !level || !programme) {
+      alert("Please select all fields: semester, level, and programme.");
+      return;
+    }
+
+    if (
+      semester === "First Semester" &&
+      level === "200" &&
+      programme === "Single Major Computer Science"
+    ) {
+      setCourses(YearTwoSMFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "200" &&
+      programme === "Combined Major / Major Minor Computer Science"
+    ) {
+      setCourses(YearTwoCMFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "200" &&
+      programme === "IT"
+    ) {
+      setCourses(YearTwoITFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "200" &&
+      programme === "Minor Computer Science"
+    ) {
+      setCourses(YearTwoMFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "300" &&
+      programme === "Single Major Computer Science"
+    ) {
+      setCourses(YearThreeSMFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "300" &&
+      programme === "Combined Major / Major Minor Computer Science"
+    ) {
+      setCourses(YearThreeCMFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "300" &&
+      programme === "IT"
+    ) {
+      setCourses(YearThreeITFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "300" &&
+      programme === "Minor Computer Science"
+    ) {
+      setCourses(YearThreeMFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "400" &&
+      programme === "Single Major Computer Science"
+    ) {
+      setCourses(YearFourSMFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "400" &&
+      programme === "Combined Major / Major Minor Computer Science"
+    ) {
+      setCourses(YearFourCMFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "400" &&
+      programme === "IT"
+    ) {
+      setCourses(YearFourITFirstSem);
+    } else if (
+      semester === "First Semester" &&
+      level === "400" &&
+      programme === "Minor Computer Science"
+    ) {
+      setCourses(YearFourMFirstSem);
+    }
+
+    // Show the modal with the courses
+    const modal = document.getElementById("courses_modal") as HTMLDialogElement;
+    if (modal) {
+      modal.showModal();
+    }
+  };
+
+  // Parallax effect
+  useEffect(() => {
+    const parallax = (event: MouseEvent) => {
+      const images = document.querySelectorAll(".mouse");
+      images.forEach((shift) => {
+        const position = shift.getAttribute("value");
+        const x = (window.innerWidth - event.pageX * Number(position)) / 90;
+        const y = (window.innerHeight - event.pageY * Number(position)) / 90;
+        (
+          shift as HTMLElement
+        ).style.transform = `translateX(${x}px) translateY(${y}px)`;
+      });
+    };
+
+    document.addEventListener("mousemove", parallax);
+    return () => {
+      document.removeEventListener("mousemove", parallax);
+    };
+  }, []);
+
+  return (
+    <div className="mouse_move relative w-full h-screen overflow-hidden flex justify-center items-center bg-white md:bg-[#e58018]">
+      {/* Parallax Images */}
+      <ParallaxImages />
+      {/* Main Form and Modal */}
+      <div className="w-full md:w-[40%] mx-0 md:mx-auto absolute px-4 md:px-0 z-10 bg-white md:rounded-lg">
+        <div className="flex flex-col justify-center items-center space-y-9 md:px-20 py-10">
+          <div className="flex flex-col justify-center items-center w-full text-center space-y-2">
+            <img id="img5" src="/campssa-2d.png" className="w-[100px]" />
+            <div>
+              <h1 className="text-4xl font-bold text-[#000]">
+                Course Selection
+              </h1>
+              <p className="text-lg text-gray-500">COMPSSA</p>
+            </div>
+          </div>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Semester</InputLabel>
+            <Select
+              labelId="select-label-1"
+              id="simple-select-1"
+              value={semester}
+              label="Semester"
+              onChange={handleSemesterChange}
+            >
+              <MenuItem value={"First Semester"}>First Semester</MenuItem>
+              <MenuItem value={"Second Semester"} disabled>
+                Second Semester
+              </MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl fullWidth>
+            <InputLabel id="select-label-2">Level</InputLabel>
+            <Select
+              labelId="select-label-2"
+              id="simple-select-2"
+              value={level}
+              label="Level"
+              onChange={handleLevelChange}
+            >
+              <MenuItem value={"100"} disabled>
+                Level 100
+              </MenuItem>
+              <MenuItem value={"200"}>Level 200</MenuItem>
+              <MenuItem value={"300"}>Level 300</MenuItem>
+              <MenuItem value={"400"}>Level 400</MenuItem>
+            </Select>
+          </FormControl>
+          <FormControl fullWidth>
+            <InputLabel id="select-label-3">Programme</InputLabel>
+            <Select
+              labelId="select-label-3"
+              id="simple-select-3"
+              value={programme}
+              label="Programme"
+              onChange={handleProgrammeChange}
+            >
+              <MenuItem value={"IT"}>IT</MenuItem>
+              <MenuItem value={"Single Major Computer Science"}>
+                Single Major Computer Science
+              </MenuItem>
+              <MenuItem value={"Combined Major / Major Minor Computer Science"}>
+                Combined / Major-Minor Computer Science
+              </MenuItem>
+              <MenuItem value={"Minor Computer Science"}>
+                Minor Computer Science
+              </MenuItem>
+            </Select>
+          </FormControl>
+          <button
+            className="btn bg-[#2286ea] text-white w-40"
+            onClick={handleGetCourses}
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Get Courses
+          </button>
+          <div>
+            <span>Get Slides and Past Questions here: </span>
+            <a
+              href="https://drive.google.com/drive/folders/1Bv5z5z3XJkR4ZQ8Zq6hJpXmFm9yjQ6vF?usp=sharing"
+              target="_blank"
+              className="text-[#2286ea] underline"
+            >
+              Drive One
+            </a>
+            &nbsp;and&nbsp;
+            <a
+              href="https://drive.google.com/drive/folders/1Bv5z5z3XJkR4ZQ8Zq6hJpXmFm9yjQ6vF?usp=sharing"
+              target="_blank"
+              className="text-[#2286ea] underline"
+            >
+              Drive Two
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <ShowCoursesModal courses={courses} />
+      </div>
     </div>
   );
 }

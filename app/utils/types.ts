@@ -3,7 +3,7 @@ export interface programContent {
   description: string | null;
   courses: Array<{
     id: number;
-    course: string;
+    code: string;
     title: string;
     credits: number;
     preRequisite: string | null;

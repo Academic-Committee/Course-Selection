@@ -6,7 +6,7 @@ export const YearTwoMFirstSem: programContent = {
   courses: [
     {
       id: 1,
-      course: "CBAS 210",
+      code: "CBAS 210",
       title: "Academic Writing II",
       credits: 3,
       preRequisite: "",
@@ -14,7 +14,7 @@ export const YearTwoMFirstSem: programContent = {
     },
     {
       id: 2,
-      course: "DCIT 201",
+      code: "DCIT 201",
       title: "Programming I",
       credits: 3,
       preRequisite: "",
@@ -22,7 +22,7 @@ export const YearTwoMFirstSem: programContent = {
     },
     {
       id: 3,
-      course: "DCIT 203",
+      code: "DCIT 203",
       title: "Digital and Logic Systems Design",
       credits: 3,
       preRequisite: "",
@@ -30,7 +30,7 @@ export const YearTwoMFirstSem: programContent = {
     },
     {
       id: 6,
-      course: "MATH 223",
+      code: "MATH 223",
       title: "Calculus II",
       credits: 3,
       preRequisite: "",
@@ -41,11 +41,11 @@ export const YearTwoMFirstSem: programContent = {
 
 export const YearThreeMFirstSem: programContent = {
   header: "Level 300 First Semester (Minor in Computer Science)",
-  description: "Select 6 credits from the following courses",
+  description: "* Select 6 credits from the following courses *",
   courses: [
     {
       id: 7,
-      course: "DCIT 301",
+      code: "DCIT 301",
       title: "Operating Systems",
       credits: 3,
       preRequisite: "",
@@ -53,7 +53,7 @@ export const YearThreeMFirstSem: programContent = {
     },
     {
       id: 8,
-      course: "DCIT 303",
+      code: "DCIT 303",
       title: "Computer Networks",
       credits: 3,
       preRequisite: "",
@@ -61,7 +61,7 @@ export const YearThreeMFirstSem: programContent = {
     },
     {
       id: 9,
-      course: "DCIT 305",
+      code: "DCIT 305",
       title: "Database Fundamentals",
       credits: 3,
       preRequisite: "",
@@ -72,6 +72,6 @@ export const YearThreeMFirstSem: programContent = {
 
 export const YearFourMFirstSem: programContent = {
   header: "Level 400 First Semester (Combined Major)",
-  description: "Select all your courses from your major",
+  description: "* Select all your courses from your major *",
   courses: [],
 };

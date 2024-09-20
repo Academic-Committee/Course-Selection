@@ -6,7 +6,7 @@ export const YearTwoITFirstSem: programContent = {
   courses: [
     {
       id: 1,
-      course: "CBAS 210",
+      code: "CBAS 210",
       title: "Academic Writing II",
       credits: 3,
       preRequisite: "",
@@ -14,7 +14,7 @@ export const YearTwoITFirstSem: programContent = {
     },
     {
       id: 2,
-      course: "DCIT 201",
+      code: "DCIT 201",
       title: "Programming I",
       credits: 3,
       preRequisite: "",
@@ -22,7 +22,7 @@ export const YearTwoITFirstSem: programContent = {
     },
     {
       id: 3,
-      course: "DCIT 203",
+      code: "DCIT 203",
       title: "Digital and Logic Systems Design",
       credits: 3,
       preRequisite: "",
@@ -30,7 +30,7 @@ export const YearTwoITFirstSem: programContent = {
     },
     {
       id: 4,
-      course: "DCIT 205",
+      code: "DCIT 205",
       title: "Multi Media and Web Design",
       credits: 3,
       preRequisite: "",
@@ -38,7 +38,7 @@ export const YearTwoITFirstSem: programContent = {
     },
     {
       id: 5,
-      course: "DCIT 207",
+      code: "DCIT 207",
       title: "Computer Organization and Architecture",
       credits: 3,
       preRequisite: "",
@@ -46,7 +46,7 @@ export const YearTwoITFirstSem: programContent = {
     },
     {
       id: 6,
-      course: "DCIT 209",
+      code: "DCIT 209",
       title: "E-Business Architectures",
       credits: 3,
       preRequisite: "",
@@ -55,14 +55,14 @@ export const YearTwoITFirstSem: programContent = {
   ],
 };
 
-export const YearThreeSMFirstSem: programContent = {
+export const YearThreeITFirstSem: programContent = {
   header: "Level 300 First Semester (IT)",
   description:
-    "Select 3-6 credits from the elective courses in addition to the core courses",
+    "* Select 3-6 credits from the elective courses in addition to the core courses *",
   courses: [
     {
       id: 7,
-      course: "DCIT 301",
+      code: "DCIT 301",
       title: "Operating Systems",
       credits: 3,
       preRequisite: "",
@@ -70,7 +70,7 @@ export const YearThreeSMFirstSem: programContent = {
     },
     {
       id: 8,
-      course: "DCIT 303",
+      code: "DCIT 303",
       title: "Computer Networks",
       credits: 3,
       preRequisite: "",
@@ -78,7 +78,7 @@ export const YearThreeSMFirstSem: programContent = {
     },
     {
       id: 9,
-      course: "DCIT 305",
+      code: "DCIT 305",
       title: "Database Fundamentals",
       credits: 3,
       preRequisite: "",
@@ -86,7 +86,7 @@ export const YearThreeSMFirstSem: programContent = {
     },
     {
       id: 10,
-      course: "DCIT 313",
+      code: "DCIT 313",
       title: "Introduction to Artificial Intelligence",
       credits: 3,
       preRequisite: "",
@@ -94,7 +94,7 @@ export const YearThreeSMFirstSem: programContent = {
     },
     {
       id: 11,
-      course: "DCIT 317",
+      code: "DCIT 317",
       title: "IT Project Management",
       credits: 3,
       preRequisite: "",
@@ -102,7 +102,7 @@ export const YearThreeSMFirstSem: programContent = {
     },
     {
       id: 12,
-      course: "DCIT 307",
+      code: "DCIT 307",
       title: "Mini-Project",
       credits: 1,
       preRequisite: "",
@@ -110,7 +110,7 @@ export const YearThreeSMFirstSem: programContent = {
     },
     {
       id: 12,
-      course: "DCIT 315",
+      code: "DCIT 315",
       title: "Principles of 3D Environment",
       credits: 3,
       preRequisite: "",
@@ -118,7 +118,7 @@ export const YearThreeSMFirstSem: programContent = {
     },
     {
       id: 12,
-      course: "DCIT 321",
+      code: "DCIT 321",
       title: "Software Evolution",
       credits: 3,
       preRequisite: "",
@@ -130,11 +130,11 @@ export const YearThreeSMFirstSem: programContent = {
 export const YearFourITFirstSem: programContent = {
   header: "Level 400 First Semester (IT)",
   description:
-    "Select 9-12 credits from the elective courses in addition to the core courses",
+    "* Select 9-12 credits from the elective courses in addition to the core courses *",
   courses: [
     {
       id: 13,
-      course: "DCIT 400",
+      code: "DCIT 400",
       title: "Project",
       credits: 3,
       preRequisite: "",
@@ -142,7 +142,7 @@ export const YearFourITFirstSem: programContent = {
     },
     {
       id: 14,
-      course: "DCIT 401",
+      code: "DCIT 401",
       title: "Social, Legal, Ethical and Professional Issues",
       credits: 3,
       preRequisite: "",
@@ -150,7 +150,7 @@ export const YearFourITFirstSem: programContent = {
     },
     {
       id: 15,
-      course: "DCIT 409",
+      code: "DCIT 409",
       title: "Digital Forensics",
       credits: 3,
       preRequisite: "",
@@ -158,7 +158,7 @@ export const YearFourITFirstSem: programContent = {
     },
     {
       id: 16,
-      course: "DCIT 413",
+      code: "DCIT 413",
       title: "Play and Games",
       credits: 3,
       preRequisite: "",
@@ -166,7 +166,7 @@ export const YearFourITFirstSem: programContent = {
     },
     {
       id: 17,
-      course: "DCIT 415",
+      code: "DCIT 415",
       title: "Advanced Software Engineering",
       credits: 3,
       preRequisite: "",
@@ -174,7 +174,7 @@ export const YearFourITFirstSem: programContent = {
     },
     {
       id: 18,
-      course: "DCIT 419",
+      code: "DCIT 419",
       title: "Agile Methods",
       credits: 3,
       preRequisite: "",
@@ -182,7 +182,7 @@ export const YearFourITFirstSem: programContent = {
     },
     {
       id: 20,
-      course: "DCIT 421",
+      code: "DCIT 421",
       title: "Persuasive Systems Development",
       credits: 3,
       preRequisite: "",

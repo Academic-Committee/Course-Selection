@@ -6,7 +6,7 @@ export const YearTwoCMFirstSem: programContent = {
   courses: [
     {
       id: 1,
-      course: "CBAS 210",
+      code: "CBAS 210",
       title: "Academic Writing II",
       credits: 3,
       preRequisite: "",
@@ -14,7 +14,7 @@ export const YearTwoCMFirstSem: programContent = {
     },
     {
       id: 2,
-      course: "DCIT 201",
+      code: "DCIT 201",
       title: "Programming I",
       credits: 3,
       preRequisite: "",
@@ -22,7 +22,7 @@ export const YearTwoCMFirstSem: programContent = {
     },
     {
       id: 3,
-      course: "DCIT 203",
+      code: "DCIT 203",
       title: "Digital and Logic Systems Design",
       credits: 3,
       preRequisite: "",
@@ -30,7 +30,7 @@ export const YearTwoCMFirstSem: programContent = {
     },
     {
       id: 6,
-      course: "MATH 223",
+      code: "MATH 223",
       title: "Calculus II",
       credits: 3,
       preRequisite: "",
@@ -42,11 +42,11 @@ export const YearTwoCMFirstSem: programContent = {
 export const YearThreeCMFirstSem: programContent = {
   header: "Level 300 First Semester (Combined Major / Major-Minor)",
   description:
-    "Select 3 credits from the electives in addition to the core courses",
+    "* Select 3 credits from the electives in addition to the core courses *",
   courses: [
     {
       id: 7,
-      course: "DCIT 301",
+      code: "DCIT 301",
       title: "Operating Systems",
       credits: 3,
       preRequisite: "",
@@ -54,7 +54,7 @@ export const YearThreeCMFirstSem: programContent = {
     },
     {
       id: 8,
-      course: "DCIT 303",
+      code: "DCIT 303",
       title: "Computer Networks",
       credits: 3,
       preRequisite: "",
@@ -62,7 +62,7 @@ export const YearThreeCMFirstSem: programContent = {
     },
     {
       id: 9,
-      course: "DCIT 305",
+      code: "DCIT 305",
       title: "Database Fundamentals",
       credits: 3,
       preRequisite: "",
@@ -70,7 +70,7 @@ export const YearThreeCMFirstSem: programContent = {
     },
     {
       id: 10,
-      course: "DCIT 313",
+      code: "DCIT 313",
       title: "Introduction to Artificial Intelligence",
       credits: 3,
       preRequisite: "",
@@ -78,7 +78,7 @@ export const YearThreeCMFirstSem: programContent = {
     },
     {
       id: 12,
-      course: "DCIT 309",
+      code: "DCIT 309",
       title: "Embedded Systems and IoT",
       credits: 3,
       preRequisite: "",
@@ -89,11 +89,11 @@ export const YearThreeCMFirstSem: programContent = {
 
 export const YearFourCMFirstSem: programContent = {
   header: "Level 400 First Semester (Combined Major / Major-Minor)",
-  description: "Select 6-9 credits from the elective courses",
+  description: "* Select 6-9 credits from the elective courses *",
   courses: [
     {
       id: 13,
-      course: "DCIT 400",
+      code: "DCIT 400",
       title: "Project",
       credits: 3,
       preRequisite: "",
@@ -101,7 +101,7 @@ export const YearFourCMFirstSem: programContent = {
     },
     {
       id: 14,
-      course: "DCIT 401",
+      code: "DCIT 401",
       title: "Social, Legal, Ethical and Professional Issues",
       credits: 3,
       preRequisite: "",
@@ -109,7 +109,7 @@ export const YearFourCMFirstSem: programContent = {
     },
     {
       id: 15,
-      course: "DCIT 407",
+      code: "DCIT 407",
       title: "Image Processing",
       credits: 3,
       preRequisite: "",
@@ -117,7 +117,7 @@ export const YearFourCMFirstSem: programContent = {
     },
     {
       id: 16,
-      course: "DCIT 403",
+      code: "DCIT 403",
       title: "Designing Intelligent Agents",
       credits: 3,
       preRequisite: "",
@@ -125,7 +125,7 @@ export const YearFourCMFirstSem: programContent = {
     },
     {
       id: 17,
-      course: "DCIT 405",
+      code: "DCIT 405",
       title: "Statistical Models and Methods for Data Science",
       credits: 3,
       preRequisite: "",
@@ -133,7 +133,7 @@ export const YearFourCMFirstSem: programContent = {
     },
     {
       id: 18,
-      course: "DCIT 411",
+      code: "DCIT 411",
       title: "Bioinformatics",
       credits: 3,
       preRequisite: "",
@@ -141,7 +141,7 @@ export const YearFourCMFirstSem: programContent = {
     },
     {
       id: 19,
-      course: "DCIT 417",
+      code: "DCIT 417",
       title: "Network Performance Analysis and Modeling",
       credits: 3,
       preRequisite: "",
@@ -149,7 +149,7 @@ export const YearFourCMFirstSem: programContent = {
     },
     {
       id: 20,
-      course: "DCIT 423",
+      code: "DCIT 423",
       title: "Network Servers and Infrastructure",
       credits: 3,
       preRequisite: "",
