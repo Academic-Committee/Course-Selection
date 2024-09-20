@@ -166,7 +166,9 @@ export default function Home() {
               <h1 className="text-4xl font-bold text-[#000]">
                 Course Selection
               </h1>
-              <p className="text-lg text-gray-500">COMPSSA</p>
+              <p className="text-lg text-gray-500">
+                COMPSSA Academic Committee
+              </p>
             </div>
           </div>
           <FormControl fullWidth>
