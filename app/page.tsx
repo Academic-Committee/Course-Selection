@@ -217,7 +217,7 @@ export default function Home() {
                 Single Major Computer Science
               </MenuItem>
               <MenuItem value={"Combined Major / Major Minor Computer Science"}>
-                Combined / Major-Minor Computer Science
+                Combined Major / Major-Minor Computer Science
               </MenuItem>
               <MenuItem value={"Minor Computer Science"}>
                 Minor Computer Science
