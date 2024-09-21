@@ -233,7 +233,7 @@ export default function Home() {
           <div>
             <span>Get Slides and Past Questions here: </span>
             <a
-              href="https://drive.google.com/drive/folders/1Bv5z5z3XJkR4ZQ8Zq6hJpXmFm9yjQ6vF?usp=sharing"
+              href="https://drive.google.com/drive/u/0/folders/1WV08e8RLx3mwDwtrju0NoWshC6pf9oUb"
               target="_blank"
               className="text-[#2286ea] underline"
             >
@@ -241,7 +241,7 @@ export default function Home() {
             </a>
             &nbsp;and&nbsp;
             <a
-              href="https://drive.google.com/drive/folders/1Bv5z5z3XJkR4ZQ8Zq6hJpXmFm9yjQ6vF?usp=sharing"
+              href="https://drive.google.com/drive/folders/1tfe1OxqdDB7xq7i400sNmAivCdP2B43R?usp=sharing"
               target="_blank"
               className="text-[#2286ea] underline"
             >
